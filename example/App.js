@@ -3,19 +3,14 @@ import { Platform, StyleSheet, Text, View, TouchableOpacity } from 'react-native
 import LaunchScreen from 'react-native-launch-screen';
 
 export default function App() {
-  let show = () => {
-    LaunchScreen.show((value) => {
-      console.warn(value)
-
-      setTimeout(() => LaunchScreen.hide((value) => {
-        console.warn(value)
-      }), 3000);
-    })
+  let onPress = () => {
+    LaunchScreen.show();
+    setTimeout(() => LaunchScreen.hide(), 3000);
   }
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={show}>
+      <TouchableOpacity onPress={onPress}>
         <Text>Show Launch Screen for 3 seconds</Text>
       </TouchableOpacity>
     </View>

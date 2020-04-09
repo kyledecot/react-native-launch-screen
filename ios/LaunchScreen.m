@@ -2,35 +2,31 @@
 
 @implementation LaunchScreen
 
-static UIView *subview = nil;
+static UIViewController *launchScreenViewController = nil;
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(show:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(show)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-           UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Launch Screen" bundle:nil];
-           
-           UIViewController *storyboardViewController = [storyboard instantiateInitialViewController];
-           
-        subview = [storyboardViewController view];
-       [[rootViewController view] addSubview: subview];
-
-
-           callback(@[@"show"]);
-    });
-   
-}
-
-RCT_EXPORT_METHOD(hide:(RCTResponseSenderBlock)callback)
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (subview) {
-            [subview removeFromSuperview];
+        if (!launchScreenViewController) {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Launch Screen" bundle:nil];
+            
+            launchScreenViewController = [storyboard instantiateInitialViewController];
         }
         
-        callback(@[@"hide"]);
+        UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+           
+       [[rootViewController view] addSubview: [launchScreenViewController view]];
+    });
+}
+
+RCT_EXPORT_METHOD(hide)
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (launchScreenViewController) {
+            [[launchScreenViewController view] removeFromSuperview];
+        }
     });
 }
 
