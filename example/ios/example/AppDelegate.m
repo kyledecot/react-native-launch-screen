@@ -39,8 +39,10 @@
   [controller startAndShowLaunchScreen:self.window];
 #endif
 
-  [super application:application didFinishLaunchingWithOptions:launchOptions];
+  [LaunchScreen show];
 
+  [super application:application didFinishLaunchingWithOptions:launchOptions];
+  
   return YES;
 }
 
