@@ -38,6 +38,8 @@ target 'example' do
 
   # Other native modules
 
+  pod 'react-native-launch-screen', :path => "../../"
+
   # Automatically detect installed unimodules
   use_unimodules!
 
