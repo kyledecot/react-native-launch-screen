@@ -1,29 +1,39 @@
-import * as React from 'react';
-import { useEffect } from 'react';
-import { Platform, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import React from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
+
 import LaunchScreen from 'react-native-launch-screen';
 
-export default function App() {
-  let onPress = () => {
-    LaunchScreen.show();
-    setTimeout(LaunchScreen.hide, 3000);
-  }
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
 
-  useEffect(onPress, []);
-
+const App: () => React$Node = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onPress}>
-        <Text>Show Launch Screen for 3 seconds</Text>
+        <Text>Show the Launch Screen for 3 seconds</Text>
       </TouchableOpacity>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: Colors.lighter,
     justifyContent: 'center',
     alignItems: 'center',
   },
 });
+
+export default App;

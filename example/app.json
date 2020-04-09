@@ -1,24 +1,4 @@
 {
-  "name": "example",
-  "displayName": "example",
-  "expo": {
-    "name": "example",
-    "slug": "example",
-    "version": "1.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "bundleIdentifier": "com.kyledecot.Example"
-    },
-    "android": {
-      "package": "Example"
-    },
-    "entryPoint": "node_modules/expo/AppEntry.js"
-  }
+  "name": "Example",
+  "displayName": "Example"
 }

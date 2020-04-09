@@ -1,23 +1,20 @@
 {
   "name": "react-native-launch-screen",
-  "title": "React Native Launch Screen",
+  "title": "React Native - Launch Screen",
   "version": "1.0.0",
   "description": "TODO",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-launch-screen.git",
-    "baseUrl": "https://github.com/github_account/react-native-launch-screen"
+    "url": "git+https://github.com/kyledecot/react-native-launch-screen.git",
+    "baseUrl": "https://github.com/kyledecot/react-native-launch-screen"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Kyle Decot",
+    "email": "kyle.decot@icloud.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
