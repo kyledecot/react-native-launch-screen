@@ -10,15 +10,7 @@ import {
 
 import LaunchScreen from 'react-native-launch-screen';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const App: () => React$Node = () => {
+const App = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onPress}>
@@ -30,7 +22,6 @@ const App: () => React$Node = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.lighter,
     justifyContent: 'center',
     alignItems: 'center',
   },
