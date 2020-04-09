@@ -11,16 +11,14 @@ Pod::Spec.new do |s|
                    DESC
   s.homepage     = "https://github.com/github_account/react-native-launch-screen"
   s.license      = "MIT"
-  # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.authors      = { "Your Name" => "yourname@email.com" }
+  # s.license    = { :type => "MIT", :file => "FILE_LICENSE" } TODO
+  s.authors      = { "Kyle Decot" => "kyle.decot@icloud.com" }
   s.platforms    = { :ios => "9.0" }
-  s.source       = { :git => "https://github.com/github_account/react-native-launch-screen.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/kyledecot/react-native-launch-screen.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
 
   s.dependency "React"
-  # ...
-  # s.dependency "..."
 end
 
