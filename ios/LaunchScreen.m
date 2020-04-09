@@ -6,28 +6,40 @@ static UIViewController *launchScreenViewController = nil;
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(show)
++(void)show
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (!launchScreenViewController) {
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Launch Screen" bundle:nil];
-            
-            launchScreenViewController = [storyboard instantiateInitialViewController];
-        }
+
+    if (!launchScreenViewController) {
+         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Launch Screen" bundle:nil];
+         
+         launchScreenViewController = [storyboard instantiateInitialViewController];
+     }
+     
+     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
         
-        UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-           
-       [[rootViewController view] addSubview: [launchScreenViewController view]];
-    });
+    [[rootViewController view] addSubview: [launchScreenViewController view]];
+        });
+
 }
 
-RCT_EXPORT_METHOD(hide)
++(void)hide
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
+   dispatch_async(dispatch_get_main_queue(), ^{
         if (launchScreenViewController) {
             [[launchScreenViewController view] removeFromSuperview];
         }
     });
+}
+
+RCT_EXPORT_METHOD(show)
+{
+    [[self class] show];
+}
+
+RCT_EXPORT_METHOD(hide)
+{
+    [[self class] hide];
 }
 
 @end

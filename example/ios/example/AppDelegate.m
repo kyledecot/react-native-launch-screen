@@ -6,6 +6,7 @@
  */
 
 #import "AppDelegate.h"
+#import <react-native-launch-screen/LaunchScreen.h>
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>

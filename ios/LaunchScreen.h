@@ -2,4 +2,7 @@
 
 @interface LaunchScreen : NSObject <RCTBridgeModule>
 
++(void)show;
++(void)hide;
+
 @end
