@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   react-native-launch-screen
                    DESC
-  s.homepage     = "https://github.com/github_account/react-native-launch-screen"
+  s.homepage     = "https://github.com/kyledecot/react-native-launch-screen"
   s.license      = "MIT"
   # s.license    = { :type => "MIT", :file => "FILE_LICENSE" } TODO
   s.authors      = { "Kyle Decot" => "kyle.decot@icloud.com" }
